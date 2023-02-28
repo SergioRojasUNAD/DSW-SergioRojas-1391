@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores CSS</title>
+
+    <style>
+		.sergio-row,
+		.sergio-row-content {
+			position: relative
+		}
+
+		.sergio-row-2,
+		.sergio-row-2 .sergio-row-content {
+			background-size: auto;
+			background-repeat: no-repeat
+		}
+
+		.sergio-menu .sergio-hamburger-controls span,
+		.sergio-row-1,
+		.sergio-row-2,
+		.sergio-row-2 .sergio-row-content,
+		.sergio-row-3,
+		.sergio-row-3 .sergio-row-content,
+		.sergio-row-4,
+		.sergio-row-5,
+		.sergio-row-5 .sergio-row-content,
+		.sergio-row-6,
+		.sergio-row-6 .sergio-row-content,
+		.sergio-row-7 {
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #0f0332;
+			color: #000;
+			font-family: Verdana, Geneva, sans-serif
+		}
+
+		a {
+			color: #0068a5
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h3,
+		p {
+			margin: 0
+		}
+
+		.sergio-menu .sergio-hamburger-trigger {
+			display: none
+		}
+
+		.sergio-row-content {
+			max-width: 1280px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.sergio-row-content.reverse,
+		.sergio-row-content.reverse .sergio-col {
+			-moz-transform: scale(1, -1);
+			-webkit-transform: scale(1, -1);
+			-o-transform: scale(1, -1);
+			-ms-transform: scale(1, -1);
+			transform: scale(1, -1)
+		}
+
+		.sergio-row-content .sergio-col-w4 {
+			flex-basis: 33%
+		}
+
+		.sergio-row-content .sergio-col-w6 {
+			flex-basis: 50%
+		}
+
+		.sergio-row-content .sergio-col-w8 {
+			flex-basis: 67%
+		}
+
+		.sergio-row-content .sergio-col-w12 {
+			flex-basis: 100%
+		}
+
+		.sergio-icon .sergio-icon-label-right a,
+		.sergio-menu ul li a {
+			text-decoration: none
+		}
+
+		.sergio-divider,
+		.sergio-image {
+			overflow: auto
+		}
+
+		.sergio-divider .center,
+		.sergio-image .sergio-center {
+			margin: 0 auto
+		}
+
+		.sergio-row-2 .sergio-col-2 .sergio-block-1 {
+			width: 100%
+		}
+
+		.sergio-menu ul {
+			margin: 0;
+			padding: 0
+		}
+
+		.sergio-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.sergio-icon .sergio-content {
+			display: flex;
+			align-items: center
+		}
+
+		.sergio-image img {
+			display: block;
+			width: 100%
+		}
+
+		.sergio-menu .sergio-hamburger-controls {
+			cursor: pointer;
+			display: inline-block;
+			position: relative
+		}
+
+		.sergio-menu .sergio-hamburger-controls span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-size: 100%;
+			transition: .12s ease-in-out
+		}
+
+		.sergio-menu ul {
+			list-style-type: none
+		}
+
+		.sergio-menu ul.sergio-horizontal li {
+			display: inline-block
+		}
+
+		.sergio-paragraph,
+		.sergio-text {
+			overflow-wrap: anywhere
+		}
+
+		.sergio-row-1 {
+			background-color: #cccce6
+		}
+
+		.sergio-row-1 .sergio-row-content,
+		.sergio-row-4 .sergio-row-content,
+		.sergio-row-7 .sergio-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.sergio-row-1 .sergio-col-1,
+		.sergio-row-2 .sergio-col-1 .sergio-block-1,
+		.sergio-row-2 .sergio-col-1 .sergio-block-4,
+		.sergio-row-2 .sergio-col-1 .sergio-block-6,
+		.sergio-row-4 .sergio-col-1 .sergio-block-1,
+		.sergio-row-4 .sergio-col-1 .sergio-block-2,
+		.sergio-row-4 .sergio-col-2 .sergio-block-1,
+		.sergio-row-4 .sergio-col-2 .sergio-block-2,
+		.sergio-row-4 .sergio-col-2 .sergio-block-3,
+		.sergio-row-5 .sergio-col-1 .sergio-block-1,
+		.sergio-row-5 .sergio-col-1 .sergio-block-2,
+		.sergio-row-5 .sergio-col-1 .sergio-block-3,
+		.sergio-row-5 .sergio-col-2 .sergio-block-1,
+		.sergio-row-5 .sergio-col-2 .sergio-block-2,
+		.sergio-row-5 .sergio-col-2 .sergio-block-3,
+		.sergio-row-5 .sergio-col-3 .sergio-block-1,
+		.sergio-row-5 .sergio-col-3 .sergio-block-2,
+		.sergio-row-5 .sergio-col-3 .sergio-block-3 {
+			padding: 10px
+		}
+
+		.sergio-row-1 .sergio-col-1 .sergio-block-1 {
+			padding: 15px;
+			width: 100%
+		}
+
+		.sergio-row-1 .sergio-col-2 {
+			padding-bottom: 10px;
+			padding-top: 10px
+		}
+
+		.sergio-row-1 .sergio-col-2 .sergio-block-1 {
+			color: #000;
+			font-family: inherit;
+			font-size: 15px;
+			letter-spacing: 1px;
+			padding: 15px;
+			text-align: center
+		}
+
+		.sergio-row-2 .sergio-col-1 .sergio-block-3,
+		.sergio-row-3 .sergio-col-1 .sergio-block-1 {
+			padding: 10px;
+			width: 100%;
+			text-align: center
+		}
+
+		.sergio-row-2 .sergio-row-content {
+			color: #000
+		}
+
+		.sergio-row-2 .sergio-col-1 {
+			padding-bottom: 5px;
+			padding-top: 15px
+		}
+
+		.sergio-row-2 .sergio-col-2,
+		.sergio-row-3 .sergio-col-1,
+		.sergio-row-4 .sergio-col-1,
+		.sergio-row-4 .sergio-col-2,
+		.sergio-row-5 .sergio-col-1,
+		.sergio-row-5 .sergio-col-2,
+		.sergio-row-5 .sergio-col-3,
+		.sergio-row-7 .sergio-col-1 {
+			padding-top: 5px;
+			padding-bottom: 5px
+		}
+
+		.sergio-row-3 .sergio-row-content {
+			color: #000;
+			border-radius: 0
+		}
+
+		.sergio-row-4 .sergio-col-1 .sergio-block-3 {
+			padding: 10px 10px 10px 60px
+		}
+
+		.sergio-row-5 .sergio-row-content {
+			color: #000
+		}
+
+		.sergio-row-6 .sergio-row-content {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/4066/footer_bg_2.png');
+			background-position: top center;
+			color: #000
+		}
+
+		.sergio-row-6 .sergio-col-1 {
+			padding-bottom: 15px;
+			padding-top: 15px
+		}
+
+		.sergio-row-6 .sergio-col-1 .sergio-block-1,
+		.sergio-row-6 .sergio-col-1 .sergio-block-2,
+		.sergio-row-6 .sergio-col-1 .sergio-block-3 {
+			padding: 5px 10px
+		}
+
+		.sergio-row-7 .sergio-col-1 .sergio-block-1 {
+			color: #9d9d9d;
+			font-family: inherit;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.sergio-row-2 .sergio-col-1 .sergio-block-4 {
+			color: #fff;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 120%;
+			text-align: left;
+			direction: ltr;
+			letter-spacing: 0
+		}
+
+		.sergio-row-2 .sergio-col-1 .sergio-block-4 a {
+			color: #8a3c90
+		}
+
+		.sergio-row-2 .sergio-col-1 .sergio-block-4 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.sergio-row-1 .sergio-col-2 .sergio-block-1 li {
+			padding: 25px
+		}
+
+		.sergio-row-1 .sergio-col-2 .sergio-block-1 li a {
+			color: #000
+		}
+
+		@media (max-width:768px) {
+			.sergio-menu ul.with-sergio-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.sergio-menu ul.with-sergio-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.sergio-menu ul.with-sergio-hamburger li a {
+				text-decoration: none
+			}
+
+			.sergio-menu ul.with-sergio-hamburger span {
+				display: none
+			}
+
+			#sergio-hamburger-memu-r0c1m0:checked~ul,
+			.sergio-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 .sergio-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: transparent;
+				border-radius: 0
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 .sergio-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 .sergio-hamburger-controls span.sergio-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 .sergio-hamburger-controls span.sergio-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 ul.with-sergio-hamburger {
+				background-color: transparent
+			}
+
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 ul.with-sergio-hamburger li,
+			.sergio-row-1 .sergio-col-2 .sergio-block-1 ul.with-sergio-hamburger li a {
+				color: #fff
+			}
+
+			#sergio-hamburger-memu-r0c1m0:checked~.sergio-hamburger-controls .sergio-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#sergio-hamburger-memu-r0c1m0:checked~.sergio-hamburger-controls .sergio-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+		}
+
+		.sergio-row-7 .sergio-col-1 .sergio-block-1 .sergio-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.sergio-row-7 .sergio-col-1 .sergio-block-1 .sergio-icon:not(.sergio-icon-first) .sergio-content {
+			margin-left: 0
+		}
+
+		.sergio-row-7 .sergio-col-1 .sergio-block-1 .sergio-icon::not(.sergio-icon-last) .sergio-content {
+			margin-right: 0
+		}
+	</style>
+</head>
+<body>
+    <div class="sergio-page-container">
+		<div class="sergio-row sergio-row-1">
+			<div class="sergio-row-content no_stack">
+				<div class="sergio-col sergio-col-1 sergio-col-w4">
+					<div class="sergio-block sergio-block-1 sergio-image"><img alt="Your Logo" class="sergio-center sergio-fullwidthOnMobile sergio-fixedwidth" src="https://www.unad.edu.co/images/footer/logo-unad-acreditacion-min.webp" style="max-width:374px;" /></div>
+				</div>
+				<div class="sergio-col sergio-col-2 sergio-col-w8">
+					<div class="sergio-block sergio-block-1 sergio-menu">
+						<nav class="sergio-menu"><input class="sergio-hamburger-trigger" id="sergio-hamburger-memu-r0c1m0" type="checkbox" /><label class="sergio-hamburger-controls" for="sergio-hamburger-memu-r0c1m0"><span class="sergio-hamburger-open"></span><span class="sergio-hamburger-close"></span></label>
+							<ul class="sergio-horizontal with-sergio-hamburger">
+								<li><a href="index.html" target="_self" title="Index">Index (Actividad anterior)</a></li>
+								<li><a href="Inicio.html" target="_self" title="Inicio">Inicio</a></li>
+								<li><a href="tema.html" target="_self" title="Selectores CSS">Selectores CSS</a></li>
+								<li><a href="mockup.html" target="_self" title="MockUp">MockUp</a></li>
+								<li><a href="about.html" target="_self" title="Acerca de">Acerca de</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sergio-row sergio-row-2">
+			<div class="sergio-row-content">
+				<div class="sergio-col sergio-col-1 sergio-col-w6">
+					<div class="sergio-block sergio-block-1 sergio-divider">
+						<div class="center sergio-separator" style="border-top:solid 1px #dddddd;width:100%;"></div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-spacer">
+						<div class="spacer" style="height:95px;"></div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-heading">
+						<h1 style="color:#ffffff;font-size:38px;font-family:Verdana, Geneva, sans-serif;line-height:120%;text-align:left;direction:ltr;font-weight:700;letter-spacing:normal;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Selectores CSS</span> </h1>
+					</div>
+					<div class="sergio-block sergio-block-4 sergio-paragraph">
+						<p>Es el indicador que define sobre qué elementos se aplicará el conjunto de reglas de la hoja de estilos (CSS)</p>
+					</div>
+					<div class="sergio-block sergio-block-5 sergio-spacer">
+						<div class="spacer" style="height:90px;"></div>
+					</div>
+					<div class="sergio-block sergio-block-6 sergio-divider">
+						<div class="center sergio-separator" style="border-top:solid 1px #dddddd;width:100%;"></div>
+					</div>
+				</div>
+				<div class="sergio-col sergio-col-2 sergio-col-w6">
+					<div class="sergio-block sergio-block-1 sergio-image"><img alt="" class="sergio-center sergio-autowidth" src="https://i.imgur.com/ouj8uoM.png" style="max-width:640px;" /></div>
+				</div>
+			</div>
+		</div>
+		<div class="sergio-row sergio-row-3">
+			<div class="sergio-row-content">
+				<div class="sergio-col sergio-col-1 sergio-col-w12">
+					<div class="sergio-block sergio-block-1 sergio-heading">
+						<h3 style="color:#ffffff;font-size:25px;font-family:Verdana, Geneva, sans-serif;line-height:120%;text-align:center;direction:ltr;font-weight:700;letter-spacing:normal;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Tipos</span> </h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sergio-row sergio-row-4">
+			<div class="sergio-row-content">
+				<div class="sergio-col sergio-col-1 sergio-col-w6">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 16px; line-height: 19px; text-align: center;"><em style=""><strong style="">Selector universal</strong></em></p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Se utiliza para seleccionar todos los elementos de la página.</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="line-height: 180%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 25px; text-align: center;"> * {</p>
+							<p style="font-size: 14px; line-height: 25px; text-align: center;">margin: 0;</p>
+							<p style="font-size: 14px; line-height: 25px; text-align: center;"> padding: 0;</p>
+							<p style="font-size: 14px; line-height: 25px; text-align: center;">}</p>
+						</div>
+					</div>
+				</div>
+				<div class="sergio-col sergio-col-2 sergio-col-w6">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 16px; line-height: 19px; text-align: center;"><em style=""><strong style="">Selector de tipo o etiqueta</strong></em></p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector.</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="line-height: 180%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">p {</p>
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">...</p>
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sergio-row sergio-row-5">
+			<div class="sergio-row-content">
+				<div class="sergio-col sergio-col-1 sergio-col-w4">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 16px; line-height: 19px; text-align: center;"><em style=""><strong style="">Selector descendente</strong></em></p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Selecciona los elementos que se encuentran dentro de otros elementos. Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del otro elemento.</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">p span { color: red; }</p>
+						</div>
+					</div>
+				</div>
+				<div class="sergio-col sergio-col-2 sergio-col-w4">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 16px; line-height: 19px; text-align: center;"><em style=""><strong style="">Selector de clase</strong></em></p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Una de las soluciones más sencillas para aplicar estilos a un solo elemento de la página consiste en utilizar el atributo <code style="">class</code>  de HTML sobre ese elemento para indicar directamente la regla CSS que se le debe aplicar</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">&lt;body&gt;</p>
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">&lt;p class="destacado"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt; &lt;p&gt;Nunc sed lacus et est adipiscing accumsan...&lt;/p&gt; &lt;p&gt;Class aptent taciti sociosqu ad litora...&lt;/p&gt; &lt;/body&gt;</p>
+						</div>
+					</div>
+				</div>
+				<div class="sergio-col sergio-col-3 sergio-col-w4">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 16px; line-height: 19px; text-align: center;"><em style=""><strong style="">Selectores de ID</strong></em></p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">En ocasiones, es necesario aplicar estilos CSS a un único elemento de la página. Aunque puede utilizarse un selector de clase para aplicar estilos a un único elemento, existe otro selector más eficiente en este caso.</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="line-height: 120%; font-size: 12px; color: #ffffff; font-family: inherit;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">#destacado { color: red; } &lt;p&gt;Primer párrafo&lt;/p&gt; &lt;p id="destacado"&gt;Segundo párrafo&lt;/p&gt; &lt;p&gt;Tercer párrafo&lt;/p&gt;</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sergio-row sergio-row-6">
+			<div class="sergio-row-content reverse">
+				<div class="sergio-col sergio-col-1 sergio-col-w12">
+					<div class="sergio-block sergio-block-1 sergio-text">
+						<div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Sergio Nicolás Rojas Garzón - Universidad Nacional Abierta y a Distancia - Febrero 2023</p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-2 sergio-text">
+						<div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Copyright. Imágenes por UNAD 2023 </p>
+						</div>
+					</div>
+					<div class="sergio-block sergio-block-3 sergio-text">
+						<div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+							<p style="font-size: 14px; line-height: 16px; text-align: center;">Última actualización: 27 de febrero del 2023</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
