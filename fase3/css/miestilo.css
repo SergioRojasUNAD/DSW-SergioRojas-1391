@@ -3,6 +3,24 @@
 			position: relative
 		}
 
+.ul {
+	background: #3399ff;
+	padding: 20px;
+	color: black;
+		  }
+.li {
+	color: black;		
+	background: #cce5ff;
+	margin: 5px;
+		  }
+
+.button2 {background-color: #3399ff;
+	border-radius: 8px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	float: left;
+	border: 1px solid white;
+}
+
 .contenedor{
     display: grid;
     grid-template-areas: 
