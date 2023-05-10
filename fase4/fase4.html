@@ -5,32 +5,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../fase3/css/miestilo.css">
 </head>
 <body>
-    <a href="../fase3/Inicio.html">Volver al inicio</a>
-    <h1 id="resultado">Responda las siguientes preguntas</h1>
-    <div>
-        <form name="formulario">
-            <h3>1. La etiqueta que se usa para colocar un enlace a una página web es:</h3>
-            
-            <input type="radio" name="r1" value="a"> a. link <br>
-            <input type="radio" name="r1" value="b"> b. src <br>
-            <input type="radio" name="r1" value="c"> c. a <br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="https://www.unad.edu.co/images/footer/logo-unad-acreditacion-min.webp" alt="" width="550" height="100">
+            </a>
+          </div>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../fase3/Inicio.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../fase4/fase4.html">Fase 4</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../fase3/audios.html">Audio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../fase3/Us.html">Equipo</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Temas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="../fase3/tema.html">Selectores CSS</a></li>
+					  <li><a class="dropdown-item" href="../fase3/tema2.html">Box Model</a></li>
+					  <li><hr class="dropdown-divider"></li>
+					  <li><a class="dropdown-item" href="#">Tema 3</a></li>
+					  <li><a class="dropdown-item" href="#">Tema 4</a></li>
+					  <li><a class="dropdown-item" href="#">Tema 5</a></li>
+					  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Fase 3</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="sergio-row sergio-row-2">
+        <div class="sergio-row-content">
+          <div class="sergio-col sergio-col-1 sergio-col-w6">
+            <div class="sergio-block sergio-block-1 sergio-divider">
+              <div class="center sergio-separator" style="border-top:solid 1px #dddddd;width:100%;"></div>
+            </div>
+            <div class="sergio-block sergio-block-2 sergio-spacer">
+              <div class="spacer" style="height:95px;"></div>
+            </div>
+            <div class="sergio-block sergio-block-3 sergio-heading">
+              <h1 style="color:#ffffff;font-size:38px;font-family:Verdana, Geneva, sans-serif;line-height:120%;text-align:left;direction:ltr;font-weight:700;letter-spacing:normal;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Responda las siguientes preguntas:</span> </h1>
+            </div>
+            <div class="sergio-block sergio-block-4 sergio-paragraph">
+            </div>
+            <div class="sergio-block sergio-block-5 sergio-spacer">
+              <div class="spacer" style="height:90px;"></div>
+            </div>
+            <div class="sergio-block sergio-block-6 sergio-divider">
+              <div class="center sergio-separator" style="border-top:solid 1px #dddddd;width:100%;"></div>
+            </div>
+                </div><div>
+                    <form name="formulario">
+                        <h1 id="resultado">Responda las siguientes preguntas</h1>
+                        <h3>1. ¿Qué es un selector CSS de selección múltiple?</h3>
 
-            <h3>2. La propiedad con la que se define el comportamiento de un contenedor es:</h3>
+                        <input type="radio" name="r1" value="a"> a. Un selector que permite seleccionar varios elementos con una sola regla. <br>
+                        <input type="radio" name="r1" value="b"> b. Un selector que solo se aplica a elementos específicos en una página web. <br>
+                        <input type="radio" name="r1" value="c"> c. Un selector que solo se aplica a elementos que cumplen con ciertos criterios de estilo. <br>
+                    
+                        <h3>2. ¿Cuál es el operador utilizado en un selector de selección múltiple?</h3>
+                    
+                        <input type="radio" name="r2" value="a"> a. + <br>
+                        <input type="radio" name="r2" value="b"> b. , <br>
+                        <input type="radio" name="r2" value="c"> c. ~ <br>
+                    
+                        <h3>3. ¿Qué selectores se pueden combinar en un selector de selección múltiple?</h3>
+                        <input type="radio" name="r3" value="a"> a. Selectores de elemento y de clase. <br>
+                        <input type="radio" name="r3" value="b"> b. Selectores de elemento y de ID. <br>
+                        <input type="radio" name="r3" value="c"> c. Cualquier combinación de selectores. <br>
 
-            <input type="radio" name="r2" value="a"> a. display <br>
-            <input type="radio" name="r2" value="b"> b. position <br>
-            <input type="radio" name="r2" value="c"> c. color <br>
+                        <h3>4. ¿Pueden usarse selectores de pseudoclase en un selector de selección múltiple?</h3>
+                        <input type="radio" name="r4" value="a"> a. Sí, pero solo si se combinan con selectores de clase. <br>
+                        <input type="radio" name="r4" value="b"> b. No, no es posible <br>
+                        <input type="radio" name="r4" value="c"> c. Sí, se pueden combinar con cualquier tipo de selector. <br>
+                    
+                        <h3>5. ¿Qué selector se puede usar para seleccionar todos los elementos de un mismo tipo dentro de un contenedor específico?</h3>
+                        <input type="radio" name="r5" value="a"> a. El selector de clase. <br>
+                        <input type="radio" name="r5" value="b"> b. El selector descendente. <br>
+                        <input type="radio" name="r5" value="c"> c. El selector ascendente. <br>
 
-            <h3>3. La etiqueta para definir un texto como importante es:</h3>
-            <input type="radio" name="r3" value="a"> a. single <br>
-            <input type="radio" name="r3" value="b"> b. strong <br>
-            <input type="radio" name="r3" value="c"> c. important <br>
-        
-        <input type="button" value="Enviar" onclick="ProcesarRespuesta()">
-        </form>
+                    <input type="button" value="Enviar" onclick="ProcesarRespuesta()">
+                    </form>
+                </div>
+        </div>
+      </div>
     </div>
+    <footer>	
+      <div class="sergio-row sergio-row-3" name="about" id="about">
+        <div class="sergio-row-content reverse">
+          <div class="sergio-col sergio-col-1 sergio-col-w12">
+            <div class="sergio-block sergio-block-1 sergio-text">
+              <div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+                <p style="font-size: 14px; line-height: 16px; text-align: center;">Sergio Nicolás Rojas Garzón & Jhan Franco Vanegas Hernandez - Universidad Nacional Abierta y a Distancia - Abril 2023</p>
+              </div>
+            </div>
+            <div class="sergio-block sergio-block-2 sergio-text">
+              <div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+                <p style="font-size: 14px; line-height: 16px; text-align: center;">Copyright. Imágenes por UNAD 2023 y elaboración propia </p>
+              </div>
+            </div>
+            <div class="sergio-block sergio-block-3 sergio-text">
+              <div class="sergio-text-content" style="font-size: 14px; line-height: 120%; font-family: inherit; color: #ffffff;">
+                <p style="font-size: 14px; line-height: 16px; text-align: center;">Última actualización: 10 de abril del 2023</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
 <script src="js/script.js"></script>
 </body>
 </html>

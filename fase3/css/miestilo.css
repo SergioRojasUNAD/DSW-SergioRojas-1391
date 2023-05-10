@@ -1,3 +1,18 @@
+form {
+	color: white;
+	background-color: #033450;
+	font-size: 13px;
+}
+
+form h1{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+form h3{
+	font-size: 14px;
+}
+
 .sergio-row,
 		.sergio-row-content {
 			position: relative
